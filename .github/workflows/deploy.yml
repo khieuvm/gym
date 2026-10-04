@@ -29,10 +29,9 @@ jobs:
       - name: Cài dependencies
         run: npm ci
 
-      - name: Bật GitHub Pages cho repository
+      - name: Lấy cấu hình GitHub Pages
+        # Yêu cầu: Settings -> Pages -> Source đã chọn "GitHub Actions"
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Build
         # Site chạy tại https://<user>.github.io/gym/ nên cần base path tương ứng

@@ -41,7 +41,7 @@ Mỗi lần push lên nhánh `main`, workflow [`.github/workflows/deploy.yml`](.
 
 **https://khieuvm.github.io/gym/**
 
-Lần chạy đầu tiên, workflow tự bật GitHub Pages cho repository (`actions/configure-pages` với `enablement: true`). Nếu tổ chức của bạn chặn việc này, vào **Settings → Pages → Source** và chọn **GitHub Actions**, rồi chạy lại workflow.
+Lần đầu tiên cần bật Pages một lần: **Settings → Pages → Source** chọn **GitHub Actions**. Sau đó mọi lần push đều tự deploy, không phải thao tác gì thêm.
 
 Muốn xem thử đúng bản production ở máy:
 
