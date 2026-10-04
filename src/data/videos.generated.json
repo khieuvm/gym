@@ -1,0 +1,209 @@
+{
+  "Barbell_Bench_Press_-_Medium_Grip": {
+    "url": "https://wger.de/media/exercise-video/73/cfb72002-898f-443a-a124-a0bce8a2e6ad.MP4",
+    "format": "mp4",
+    "durationSec": 21.04,
+    "wgerName": "Bench Press",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/73/view/"
+  },
+  "Incline_Dumbbell_Press": {
+    "url": "https://wger.de/media/exercise-video/537/b9c937e9-daeb-42a9-be8e-7a77e368478c.MOV",
+    "format": "mov",
+    "durationSec": 27.49,
+    "wgerName": "Incline Bench Press - Dumbbell",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/537/view/"
+  },
+  "Dumbbell_Shoulder_Press": {
+    "url": "https://wger.de/media/exercise-video/567/64f33c19-1d96-4b7c-af17-6c6a4941c614.MOV",
+    "format": "mov",
+    "durationSec": 23.13,
+    "wgerName": "Shoulder Press, Dumbbells",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/567/view/"
+  },
+  "Side_Lateral_Raise": {
+    "url": "https://wger.de/media/exercise-video/348/de69928a-8a35-4096-821c-1f46de5e0e03.MOV",
+    "format": "mov",
+    "durationSec": 18.26,
+    "wgerName": "Lateral Raises",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/348/view/"
+  },
+  "Cable_Rear_Delt_Fly": {
+    "url": "https://wger.de/media/exercise-video/82/28b53647-27e7-47cf-8852-2ee666c8b628.MOV",
+    "format": "mov",
+    "durationSec": 7.6,
+    "wgerName": "Bent-over Lateral Raises",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/82/view/"
+  },
+  "Face_Pull": {
+    "url": "https://wger.de/media/exercise-video/222/eea93fcc-6a3c-4783-8f70-0234c791a001.MOV",
+    "format": "mov",
+    "durationSec": 8.57,
+    "wgerName": "Facepull",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/222/view/"
+  },
+  "Triceps_Pushdown_-_Rope_Attachment": {
+    "url": "https://wger.de/media/exercise-video/659/1f2eb3b6-3185-429f-8330-26dc88f39aff.MOV",
+    "format": "mov",
+    "durationSec": 15.09,
+    "wgerName": "Triceps Extensions on Cable",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/659/view/"
+  },
+  "Dips_-_Triceps_Version": {
+    "url": "https://wger.de/media/exercise-video/194/d039ec90-474d-47a9-a3ad-bf0b00828c82.MP4",
+    "format": "mp4",
+    "durationSec": 12.75,
+    "wgerName": "Dips",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/194/view/"
+  },
+  "Pullups": {
+    "url": "https://wger.de/media/exercise-video/475/83067ffe-ccb9-4e22-8507-5131b211ce74.MOV",
+    "format": "mov",
+    "durationSec": 18.77,
+    "wgerName": "Pull-ups",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/475/view/"
+  },
+  "Seated_Cable_Rows": {
+    "url": "https://wger.de/media/exercise-video/512/fff4c294-93f0-4926-b3a2-bf59ad4afaa5.MOV",
+    "format": "mov",
+    "durationSec": 10.49,
+    "wgerName": "Rowing seated, narrow grip",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/512/view/"
+  },
+  "Barbell_Curl": {
+    "url": "https://wger.de/media/exercise-video/91/483f4bff-e108-41f1-8e7b-0caf24952552.MOV",
+    "format": "mov",
+    "durationSec": 12.34,
+    "wgerName": "Biceps Curls With Barbell",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/91/view/"
+  },
+  "Hammer_Curls": {
+    "url": "https://wger.de/media/exercise-video/272/df069052-2173-4f24-855f-a0eebe729f24.MOV",
+    "format": "mov",
+    "durationSec": 10.37,
+    "wgerName": "Hammer Curls",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/272/view/"
+  },
+  "Preacher_Curl": {
+    "url": "https://wger.de/media/exercise-video/465/5d2339a4-815f-46ba-aa19-8a763cfdeba0.MOV",
+    "format": "mov",
+    "durationSec": 14.32,
+    "wgerName": "Preacher Curls",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/465/view/"
+  },
+  "Front_Squat_Clean_Grip": {
+    "url": "https://wger.de/media/exercise-video/257/93145935-29db-4e52-9d2d-174b1c30c098.MOV",
+    "format": "mov",
+    "durationSec": 8.25,
+    "wgerName": "Front Squats",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/257/view/"
+  },
+  "Leg_Press": {
+    "url": "https://wger.de/media/exercise-video/371/6aae16b4-01b9-4eb4-935c-3250f84d2c59.MOV",
+    "format": "mov",
+    "durationSec": 34.69,
+    "wgerName": "Leg Press",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/371/view/"
+  },
+  "Romanian_Deadlift": {
+    "url": "https://wger.de/media/exercise-video/507/307e7276-a14d-4ea0-b579-f5b0dbc6f5af.MOV",
+    "format": "mov",
+    "durationSec": 13,
+    "wgerName": "Romanian Deadlift",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/507/view/"
+  },
+  "Barbell_Hip_Thrust": {
+    "url": "https://wger.de/media/exercise-video/294/45bacf4b-1bb6-4d47-8bd1-9f00eddd4019.MOV",
+    "format": "mov",
+    "durationSec": 30.19,
+    "wgerName": "Hip Thrust",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/294/view/"
+  },
+  "Lying_Leg_Curls": {
+    "url": "https://wger.de/media/exercise-video/365/becaf013-5044-40d0-bae9-7ed60c973737.MOV",
+    "format": "mov",
+    "durationSec": 15.06,
+    "wgerName": "Leg Curls (laying)",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/365/view/"
+  },
+  "Seated_Leg_Curl": {
+    "url": "https://wger.de/media/exercise-video/366/43df4b79-d4c3-4fbf-bcb5-e0d825b84120.MOV",
+    "format": "mov",
+    "durationSec": 24.89,
+    "wgerName": "Leg Curls (sitting)",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/366/view/"
+  },
+  "Standing_Calf_Raises": {
+    "url": "https://wger.de/media/exercise-video/622/461171e5-2b16-407d-bf27-27aeef43f105.MOV",
+    "format": "mov",
+    "durationSec": 16.43,
+    "wgerName": "Standing Calf Raises",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/622/view/"
+  },
+  "Seated_Calf_Raise": {
+    "url": "https://wger.de/media/exercise-video/590/a325ae2e-686b-4a1f-aff2-ba37fa3fa157.MOV",
+    "format": "mov",
+    "durationSec": 20.71,
+    "wgerName": "Sitting Calf Raises",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/590/view/"
+  },
+  "Split_Squat_with_Dumbbells": {
+    "url": "https://wger.de/media/exercise-video/205/c167ac34-ddbc-4e1b-8edf-1192e9d00e22.MOV",
+    "format": "mov",
+    "durationSec": 17.09,
+    "wgerName": "Dumbbell Lunges Standing",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/205/view/"
+  },
+  "Bodyweight_Walking_Lunge": {
+    "url": "https://wger.de/media/exercise-video/206/47a65c45-6fd1-4181-b71a-3a6c882e516b.MOV",
+    "format": "mov",
+    "durationSec": 14.31,
+    "wgerName": "Dumbbell Lunges Walking",
+    "license": "Creative Commons Attribution Share Alike 4",
+    "author": "Goulart",
+    "source": "https://wger.de/en/exercise/206/view/"
+  }
+}
