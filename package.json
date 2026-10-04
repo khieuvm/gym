@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "data:exercises": "node scripts/build-exercises.mjs",
     "data:videos": "node scripts/build-videos.mjs",
-    "data:all": "npm run data:exercises && npm run data:videos"
+    "data:illustrations": "node scripts/build-illustrations.mjs",
+    "data:all": "npm run data:exercises && npm run data:videos && npm run data:illustrations"
   },
   "dependencies": {
     "lucide-react": "^1.51.0",

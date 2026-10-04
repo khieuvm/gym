@@ -17,13 +17,23 @@ const NUMBER_FIELDS: { key: keyof Profile; label: string; unit: string; step: st
 const CREDITS = [
   {
     name: 'free-exercise-db (yuhonas)',
-    note: 'Ảnh minh hoạ và dữ liệu bài tập · Unlicense (phạm vi công cộng)',
+    note: 'Ảnh chụp và dữ liệu bài tập · Unlicense (phạm vi công cộng)',
     url: 'https://github.com/yuhonas/free-exercise-db',
+  },
+  {
+    name: 'Workout Guide — Bryl Lim',
+    note: 'Hình vẽ 3 khung hình, dựa trên Everkinetic · CC BY-SA 4.0 · dùng nguyên bản, không chỉnh sửa',
+    url: 'https://github.com/bryllim/workout-guide',
   },
   {
     name: 'wger',
     note: 'Video minh hoạ bài tập · Creative Commons BY-SA (ghi rõ tác giả trong từng video)',
     url: 'https://wger.de',
+  },
+  {
+    name: 'YouTube',
+    note: 'Video bạn tự ghim được phát qua trình nhúng chính thức của YouTube, không tải về hay lưu lại nội dung',
+    url: 'https://www.youtube.com',
   },
   {
     name: 'USDA FoodData Central',

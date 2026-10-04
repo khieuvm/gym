@@ -1,15 +1,23 @@
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { AlertTriangle, ArrowLeft, Lightbulb } from 'lucide-react'
 import { EXERCISE_BY_ID } from '../data/exercises'
 import { SESSIONS } from '../data/program'
 import { GROUP_LABEL } from '../lib/types'
-import { ExerciseAnimation, ExerciseVideoPlayer } from '../components/ExerciseMedia'
+import {
+  ExerciseAnimation,
+  ExerciseVideoPlayer,
+  IllustrationCredit,
+} from '../components/ExerciseMedia'
+import { hasIllustration, type MediaMode } from '../lib/media'
+import YouTubePinner from '../components/YouTubePinner'
 import { Card, Empty, Pill, SectionTitle } from '../components/ui'
 import { bestSet, loadLog } from '../lib/log'
 
 export default function ExerciseDetail() {
   const { id } = useParams()
   const ex = id ? EXERCISE_BY_ID.get(id) : undefined
+  const [mode, setMode] = useState<MediaMode>('illustration')
 
   if (!ex) {
     return (
@@ -24,6 +32,7 @@ export default function ExerciseDetail() {
 
   const usedIn = SESSIONS.filter((s) => s.blocks.some((b) => b.exerciseId === ex.id))
   const pr = bestSet(loadLog(), ex.id)
+  const canToggle = hasIllustration(ex) && ex.images.length > 0
 
   return (
     <div className="space-y-5">
@@ -34,11 +43,39 @@ export default function ExerciseDetail() {
       <div className="grid gap-5 lg:grid-cols-2">
         <div className="space-y-4">
           <Card pad={false} className="overflow-hidden">
-            <ExerciseAnimation exercise={ex} className="aspect-4/3 w-full" intervalMs={1000} />
+            <ExerciseAnimation exercise={ex} className="aspect-4/3 w-full" mode={mode} />
+            {canToggle && (
+              <div className="flex gap-1.5 border-t border-line/60 p-2">
+                {(['illustration', 'photo'] as const).map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    onClick={() => setMode(m)}
+                    className={`rounded-lg px-3 py-1 text-xs font-medium transition ${
+                      mode === m ? 'bg-brand/20 text-brand' : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    {m === 'illustration' ? 'Hình vẽ' : 'Ảnh chụp'}
+                  </button>
+                ))}
+              </div>
+            )}
           </Card>
+          {mode === 'illustration' && <IllustrationCredit exercise={ex} />}
+
           <Card>
             <SectionTitle title="Video minh hoạ" />
-            <ExerciseVideoPlayer exercise={ex} />
+            <YouTubePinner exerciseId={ex.id} exerciseName={ex.name} searchUrl={ex.youtubeSearch} />
+            {ex.video && (
+              <details className="mt-3">
+                <summary className="cursor-pointer text-sm font-medium text-slate-400">
+                  Video Creative Commons từ wger
+                </summary>
+                <div className="mt-3">
+                  <ExerciseVideoPlayer exercise={ex} />
+                </div>
+              </details>
+            )}
           </Card>
         </div>
 

@@ -29,12 +29,25 @@ export type Exercise = {
   mechanic: string | null
   primaryMuscles: string[]
   images: string[]
+  illustration?: Illustration
   instructionsEn: string[]
   howTo: string[]
   cues: string[]
   mistakes: string[]
   video?: ExerciseVideo
   youtubeSearch: string
+}
+
+/** Hình vẽ 3 khung hình từ @bryllim/workout-guide (CC BY-SA 4.0). */
+export type Illustration = {
+  slug: string
+  name: string
+  frames: string[]
+  creator: string
+  creatorUrl: string
+  license: string
+  licenseUrl: string
+  upstream: { name: string; url: string; changes: string } | null
 }
 
 export type ExerciseVideo = {

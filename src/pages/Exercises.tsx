@@ -72,7 +72,7 @@ export default function Exercises() {
           {list.map((e) => (
             <Link key={e.id} to={`/bai-tap/${e.id}`}>
               <Card pad={false} className="h-full overflow-hidden transition hover:border-brand/40">
-                <ExerciseAnimation exercise={e} className="h-44 w-full" intervalMs={1100} />
+                <ExerciseAnimation exercise={e} className="h-44 w-full" intervalMs={800} />
                 <div className="p-3.5">
                   <div className="font-semibold text-white">{e.name}</div>
                   <div className="mt-0.5 text-xs text-slate-500">{e.nameEn}</div>

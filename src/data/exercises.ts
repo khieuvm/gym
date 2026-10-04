@@ -1,6 +1,7 @@
 import generated from './exercises.generated.json'
 import videosJson from './videos.generated.json'
-import type { Exercise, ExerciseVideo, MuscleGroup } from '../lib/types'
+import illustrationsJson from './illustrations.generated.json'
+import type { Exercise, ExerciseVideo, Illustration, MuscleGroup } from '../lib/types'
 
 type Generated = {
   id: string
@@ -649,6 +650,7 @@ const OVERLAY: Record<string, Overlay> = {
 }
 
 const videos = videosJson as Record<string, ExerciseVideo>
+const illustrations = illustrationsJson as Record<string, Illustration>
 
 export const EXERCISES: Exercise[] = (generated as Generated[]).map((g) => {
   const o = OVERLAY[g.id]
@@ -663,6 +665,7 @@ export const EXERCISES: Exercise[] = (generated as Generated[]).map((g) => {
     mechanic: g.mechanic,
     primaryMuscles: g.primaryMuscles,
     images: g.images,
+    illustration: illustrations[g.id],
     instructionsEn: g.instructions,
     howTo: o.howTo,
     cues: o.cues,
