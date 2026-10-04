@@ -44,7 +44,6 @@ export const SESSION_BURN: Record<string, number> = {
   'ride-to-work': 750,
   'ride-home': 700,
   football: 700,
-  'desk-reset': 40,
   'rest-day': 0,
 }
 
