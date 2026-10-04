@@ -175,6 +175,86 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    id: 'supplements',
+    title: 'Thực phẩm bổ sung: cái gì đáng tiền, cái gì không',
+    summary:
+      'Với lịch tập và thực đơn hiện tại, bạn đã nạp 127–156 g đạm mỗi ngày từ thức ăn thật, vượt mục tiêu 124 g. Vì vậy phần lớn thực phẩm bổ sung là thừa. Chỉ có một món thực sự đáng mua.',
+    sections: [
+      {
+        heading: 'Creatine — món duy nhất nên mua',
+        body: [
+          'Đây là thực phẩm bổ sung được nghiên cứu nhiều nhất trong thể thao. Nó không phải hormone hay chất kích thích, mà là hợp chất có sẵn trong thịt đỏ và trong chính cơ bắp bạn.',
+          'Tác dụng không kỳ diệu nhưng có thật và đo được: giúp đẩy thêm 1–2 lần ở các set nặng. Mà tăng tải đều đặn chính là động cơ tăng cơ.',
+        ],
+        list: [
+          'Liều: 3–5 g mỗi ngày, uống lúc nào cũng được, kể cả ngày nghỉ.',
+          'Không cần giai đoạn "nạp" 20 g/ngày trong tuần đầu.',
+          'Hỗ trợ cả hoạt động bứt tốc lặp lại — đúng kiểu vận động khi đá bóng tối thứ 5.',
+          'Giúp giữ cơ tốt hơn khi đang ăn thâm hụt calo.',
+          'Hai tuần đầu cân nặng có thể nhích 0,5–1,5 kg. Đó là nước kéo vào trong cơ, không phải mỡ, và vòng bụng không vì thế mà tăng.',
+          'Uống đủ nước, đặc biệt vào ngày đạp xe 30 km.',
+        ],
+      },
+      {
+        heading: 'Chọn loại nào',
+        body: [
+          'Chỉ cần đúng một dòng chữ trên nhãn: Creatine Monohydrate. Nếu có thêm nhãn Creapure thì càng yên tâm nhưng không bắt buộc. Dạng micronized chỉ là bột mịn hơn, dễ tan hơn, không mạnh hơn.',
+          'Đây là trường hợp hiếm hoi mà loại rẻ nhất cũng là loại tốt nhất.',
+        ],
+        list: [
+          'Tránh Creatine HCL: đắt gấp 2–3 lần, không có bằng chứng cho kết quả tốt hơn.',
+          'Tránh Kre-Alkalyn / dạng đệm: nghiên cứu so sánh trực tiếp cho thấy không hơn monohydrate.',
+          'Tránh loại ghi "Creatine Matrix / Blend": trộn nhiều dạng và thường giấu liều thật của từng loại.',
+          'Tránh loại có hương vị pha sẵn đường: thêm calo không cần thiết.',
+        ],
+      },
+      {
+        heading: 'Mua ở Việt Nam — tránh hàng giả',
+        body: ['Hàng giả khá phổ biến với các thương hiệu lớn, nên ưu tiên nơi bán uy tín hơn là giá rẻ nhất.'],
+        list: [
+          'Mua ở cửa hàng dinh dưỡng thể thao có tên tuổi hoặc gian hàng chính hãng.',
+          'Kiểm tra tem chống giả, mã lô và hạn dùng in dập nổi, không phải dán giấy.',
+          'Bột phải mịn, trắng, không mùi và không vị ngọt. Hơi lợn cợn khi pha nước lạnh là bình thường.',
+          'Giá tham khảo khoảng 1.500–3.000 đồng cho mỗi liều 5 g. Rẻ hơn nhiều thì nên nghi ngờ.',
+          'Một hũ 300 g dùng được khoảng 2 tháng với liều 5 g mỗi ngày.',
+        ],
+      },
+      {
+        heading: 'Whey protein — chưa cần',
+        body: [
+          'Whey chỉ là sữa đã lọc bớt nước và đường, tức một nguồn đạm tiện lợi chứ không phải "thuốc tăng cơ". Thêm whey khi đã đủ đạm thì chỉ là thêm calo.',
+          'Các thực đơn trong app đều đã vượt mục tiêu đạm: ngày đá bóng 156 g, ngày đạp xe kèm tập tạ 151 g, ngày tập tạ 146 g, ngày nghỉ 142 g, ngày đạp xe về 127 g.',
+          'Chỉ nên mua khi bạn hay bỏ bữa vì bận, hoặc chán ăn thịt và trứng. Khi đó một scoop cho khoảng 24 g đạm và 120 kcal — nhưng một hộp cá ngừ hay ba quả trứng cũng làm được việc tương tự, rẻ hơn và no hơn.',
+        ],
+      },
+      {
+        heading: 'Thứ tự ưu tiên tiền bạc',
+        body: [],
+        list: [
+          'Đủ thức ăn thật và ngủ đủ — đây là 90% kết quả, và không tốn thêm đồng nào.',
+          'Creatine monohydrate — đáng tiền, tác dụng nhỏ nhưng thật.',
+          'Vitamin D3 — đáng cân nhắc vì dân văn phòng ít tiếp xúc nắng, giá rẻ.',
+          'Whey — chỉ khi sự tiện lợi là vấn đề, không phải vì thiếu đạm.',
+          'BCAA, pre-workout, thuốc đốt mỡ, L-carnitine — không đáng tiền với tình trạng hiện tại của bạn.',
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: 'Kreider et al. 2017 — ISSN Position Stand: Creatine Supplementation (JISSN)',
+        url: 'https://doi.org/10.1186/s12970-017-0173-z',
+      },
+      {
+        label: 'Antonio et al. 2021 — Common questions and misconceptions about creatine (JISSN)',
+        url: 'https://doi.org/10.1186/s12970-021-00412-w',
+      },
+      {
+        label: 'Morton et al. 2018 — Protein supplementation meta-analysis (BJSM)',
+        url: 'https://doi.org/10.1136/bjsports-2017-097608',
+      },
+    ],
+  },
+  {
     id: 'eating-out',
     title: 'Ăn ngoài, ăn cơm công ty mà vẫn đúng mục tiêu',
     summary:
