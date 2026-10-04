@@ -37,11 +37,22 @@ npm run lint
 
 ### Deploy lên GitHub Pages
 
+Mỗi lần push lên nhánh `main`, workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) tự build và xuất bản trang tại:
+
+**https://khieuvm.github.io/gym/**
+
+Lần chạy đầu tiên, workflow tự bật GitHub Pages cho repository (`actions/configure-pages` với `enablement: true`). Nếu tổ chức của bạn chặn việc này, vào **Settings → Pages → Source** và chọn **GitHub Actions**, rồi chạy lại workflow.
+
+Muốn xem thử đúng bản production ở máy:
+
 ```bash
-npm run deploy     # build với base '/Gym/' rồi đẩy dist/ lên nhánh gh-pages
+npm run build:gh                       # build với base /gym/
+$env:VITE_BASE='/gym/'; npx vite preview   # mở http://localhost:4173/gym/
 ```
 
-Nếu repository có tên khác, đặt biến môi trường `VITE_BASE=/ten-repo/` trước khi build.
+Nếu đổi tên repository, sửa `VITE_BASE` trong workflow và giá trị mặc định trong `scripts/build-gh.mjs`.
+
+> Lưu ý: GitHub Pages luôn công khai trên Internet, kể cả khi repository ở chế độ private. Trang này không chứa dữ liệu cá nhân — nhật ký tập, số đo và nhật ký ăn chỉ nằm trong trình duyệt của bạn.
 
 ## Cập nhật dữ liệu bài tập
 

@@ -1,8 +1,8 @@
-// Build cho GitHub Pages: đặt base path theo tên repository.
-// Đổi bằng biến môi trường VITE_BASE nếu tên repo khác.
+// Build cho GitHub Pages ở máy local (để xem thử bản production).
+// Trên CI thì workflow .github/workflows/deploy.yml tự đặt VITE_BASE.
 import { execSync } from 'node:child_process'
 
-const base = process.env.VITE_BASE ?? '/Gym/'
+const base = process.env.VITE_BASE ?? '/gym/'
 console.log(`Build với base = ${base}`)
 execSync('npx tsc -b && npx vite build', {
   stdio: 'inherit',
