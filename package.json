@@ -13,7 +13,8 @@
     "data:exercises": "node scripts/build-exercises.mjs",
     "data:videos": "node scripts/build-videos.mjs",
     "data:illustrations": "node scripts/build-illustrations.mjs",
-    "data:all": "npm run data:exercises && npm run data:videos && npm run data:illustrations"
+    "data:youtube": "node scripts/build-youtube.mjs",
+    "data:all": "npm run data:exercises && npm run data:videos && npm run data:illustrations && npm run data:youtube"
   },
   "dependencies": {
     "lucide-react": "^1.51.0",

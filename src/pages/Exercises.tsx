@@ -79,7 +79,6 @@ export default function Exercises() {
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     <Pill tone="brand">{GROUP_LABEL[e.group]}</Pill>
                     <Pill>{e.equipment}</Pill>
-                    {e.video && <Pill tone="blue">Có video</Pill>}
                   </div>
                 </div>
               </Card>

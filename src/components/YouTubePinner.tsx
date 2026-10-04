@@ -1,22 +1,18 @@
 import { useState } from 'react'
-import { Check, CirclePlay, ExternalLink, Trash2 } from 'lucide-react'
+import { Check, ExternalLink, Pencil, RotateCcw } from 'lucide-react'
 import { useStoredState } from '../lib/storage'
 import { parseYouTubeId } from '../lib/media'
+import type { Exercise } from '../lib/types'
 
-export default function YouTubePinner({
-  exerciseId,
-  exerciseName,
-  searchUrl,
-}: {
-  exerciseId: string
-  exerciseName: string
-  searchUrl: string
-}) {
+export default function YouTubePinner({ exercise }: { exercise: Exercise }) {
   const [pinned, setPinned] = useStoredState<Record<string, string>>('exercise-youtube', {})
+  const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [error, setError] = useState<string | null>(null)
 
-  const videoId = pinned[exerciseId]
+  const custom = pinned[exercise.id]
+  const suggested = exercise.youtube
+  const videoId = custom ?? suggested?.videoId
 
   const save = () => {
     const id = parseYouTubeId(draft)
@@ -26,59 +22,64 @@ export default function YouTubePinner({
     }
     setError(null)
     setDraft('')
-    setPinned((prev) => ({ ...prev, [exerciseId]: id }))
+    setEditing(false)
+    setPinned((prev) => ({ ...prev, [exercise.id]: id }))
   }
 
-  const remove = () =>
+  const restore = () =>
     setPinned((prev) => {
       const next = { ...prev }
-      delete next[exerciseId]
+      delete next[exercise.id]
       return next
     })
 
   return (
     <div className="space-y-3">
       {videoId ? (
-        <>
-          <div className="aspect-video w-full overflow-hidden rounded-xl border border-line bg-black">
-            <iframe
-              key={videoId}
-              src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
-              title={`Video hướng dẫn ${exerciseName}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              className="h-full w-full"
-            />
-          </div>
-          <button
-            type="button"
-            onClick={remove}
-            className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-danger"
-          >
-            <Trash2 size={13} /> Gỡ video đã ghim
-          </button>
-        </>
+        <div className="aspect-video w-full overflow-hidden rounded-xl border border-line bg-black">
+          <iframe
+            key={videoId}
+            src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+            title={`Video hướng dẫn ${exercise.name}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="h-full w-full"
+          />
+        </div>
       ) : (
-        <div className="rounded-xl border border-dashed border-line p-4">
-          <p className="flex items-center gap-2 text-sm text-slate-300">
-            <CirclePlay size={16} className="text-danger" />
-            Ghim một video YouTube cho bài này
+        <div className="rounded-xl border border-dashed border-line p-4 text-sm text-slate-400">
+          Chưa có video cho bài này. Hãy tìm và ghim một video bên dưới.
+        </div>
+      )}
+
+      {custom ? (
+        <p className="text-xs text-slate-500">
+          Video do bạn ghim.{' '}
+          {suggested && (
+            <button type="button" onClick={restore} className="font-medium text-brand hover:underline">
+              Quay lại video gợi ý
+            </button>
+          )}
+        </p>
+      ) : (
+        suggested && (
+          <p className="text-xs text-slate-500">
+            <a className="text-slate-300 hover:underline" href={suggested.url} target="_blank" rel="noreferrer">
+              {suggested.title}
+            </a>{' '}
+            — {suggested.channel}
+            {suggested.duration && ` · ${suggested.duration}`}
           </p>
-          <p className="mt-1 text-xs text-slate-500">
-            Video được phát bằng trình nhúng chính thức của YouTube, link lưu trên máy bạn.
-          </p>
-          <a
-            href={searchUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand hover:underline"
-          >
-            Tìm video trên YouTube <ExternalLink size={13} />
-          </a>
-          <div className="mt-3 flex gap-2">
+        )
+      )}
+
+      {editing ? (
+        <div className="space-y-2">
+          <div className="flex gap-2">
             <input
+              autoFocus
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && save()}
@@ -90,11 +91,40 @@ export default function YouTubePinner({
               onClick={save}
               className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-ink hover:brightness-110"
             >
-              <Check size={15} /> Ghim
+              <Check size={15} /> Lưu
             </button>
           </div>
-          {error && <p className="mt-2 text-xs text-danger">{error}</p>}
+          {error && <p className="text-xs text-danger">{error}</p>}
+          <div className="flex items-center gap-3">
+            <a
+              href={exercise.youtubeSearch}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 text-xs font-medium text-brand hover:underline"
+            >
+              Tìm video khác trên YouTube <ExternalLink size={12} />
+            </a>
+            <button
+              type="button"
+              onClick={() => {
+                setEditing(false)
+                setError(null)
+              }}
+              className="text-xs text-slate-500 hover:text-slate-300"
+            >
+              Huỷ
+            </button>
+          </div>
         </div>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setEditing(true)}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-line px-2.5 py-1 text-xs font-medium text-slate-400 hover:border-brand/50 hover:text-brand"
+        >
+          {custom ? <RotateCcw size={13} /> : <Pencil size={13} />}
+          Đổi video khác
+        </button>
       )}
     </div>
   )

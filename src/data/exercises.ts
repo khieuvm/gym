@@ -1,7 +1,8 @@
 import generated from './exercises.generated.json'
 import videosJson from './videos.generated.json'
 import illustrationsJson from './illustrations.generated.json'
-import type { Exercise, ExerciseVideo, Illustration, MuscleGroup } from '../lib/types'
+import youtubeJson from './youtube.generated.json'
+import type { Exercise, ExerciseVideo, Illustration, MuscleGroup, YouTubeSuggestion } from '../lib/types'
 
 type Generated = {
   id: string
@@ -651,6 +652,7 @@ const OVERLAY: Record<string, Overlay> = {
 
 const videos = videosJson as Record<string, ExerciseVideo>
 const illustrations = illustrationsJson as Record<string, Illustration>
+const youtube = youtubeJson as Record<string, YouTubeSuggestion>
 
 export const EXERCISES: Exercise[] = (generated as Generated[]).map((g) => {
   const o = OVERLAY[g.id]
@@ -671,6 +673,7 @@ export const EXERCISES: Exercise[] = (generated as Generated[]).map((g) => {
     cues: o.cues,
     mistakes: o.mistakes,
     video: videos[g.id],
+    youtube: youtube[g.id],
     youtubeSearch: `https://www.youtube.com/results?search_query=${encodeURIComponent(
       `${g.name} proper form tutorial`,
     )}`,

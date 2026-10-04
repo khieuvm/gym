@@ -65,7 +65,7 @@ export default function ExerciseDetail() {
 
           <Card>
             <SectionTitle title="Video minh hoạ" />
-            <YouTubePinner exerciseId={ex.id} exerciseName={ex.name} searchUrl={ex.youtubeSearch} />
+            <YouTubePinner exercise={ex} />
             {ex.video && (
               <details className="mt-3">
                 <summary className="cursor-pointer text-sm font-medium text-slate-400">

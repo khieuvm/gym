@@ -16,7 +16,7 @@ Web app chạy hoàn toàn trên trình duyệt (không cần server, không c�
 - **Hôm nay** — buổi tập của ngày, mục tiêu calo/macro tính theo đúng mức vận động của ngày đó.
 - **Lịch tập** — giáo án Upper/Lower 4 buổi tạ/tuần xếp xen kẽ với 2 chiều đạp xe và trận bóng thứ 5, kèm lộ trình 12 tuần.
 - **Chi tiết buổi tập** — khởi động, từng bài với số set/rep/thời gian nghỉ, ô nhập mức tạ, gợi ý số liệu buổi trước, đồng hồ đếm ngược thời gian nghỉ.
-- **Thư viện bài tập** — 56 bài tập. 52 bài có hình vẽ 3 khung hình (nét trắng trên nền tối), tất cả đều có ảnh chụp thật để đối chiếu, hướng dẫn tiếng Việt, mẹo kỹ thuật và lỗi thường gặp. Mỗi bài có thể ghim một video YouTube tuỳ ý, phát qua trình nhúng chính thức.
+- **Thư viện bài tập** — 56 bài tập. 52 bài có hình vẽ 3 khung hình (nét trắng trên nền tối), tất cả đều có ảnh chụp thật để đối chiếu, hướng dẫn tiếng Việt, mẹo kỹ thuật và lỗi thường gặp. Mỗi bài đã gắn sẵn một video hướng dẫn YouTube, phát qua trình nhúng chính thức và đổi được bất cứ lúc nào.
 - **Dinh dưỡng** — 5 thực đơn mẫu theo từng loại ngày (đạp xe + tạ, tạ, đạp xe về, đá bóng, nghỉ), mỗi món ghi bằng đơn vị gia đình và được đối chiếu với mục tiêu calo của ngày.
 - **Quy đổi khẩu phần** — công cụ đổi "1,5 chén cơm", "1 lòng bàn tay ức gà", "1 muỗng canh dầu" ra gram và calo, cộng nhật ký ăn uống trong ngày.
 - **Tiến độ** — theo dõi bằng thước dây thay vì cân: vòng bụng, % mỡ ước tính theo công thức US Navy, tỉ lệ bụng/chiều cao, biểu đồ và tổng khối lượng tạ đã nâng.
@@ -51,6 +51,8 @@ Nếu repository có tên khác, đặt biến môi trường `VITE_BASE=/ten-re
 npm run data:exercises       # sinh lại src/data/exercises.generated.json từ free-exercise-db
 npm run data:videos          # sinh lại src/data/videos.generated.json từ wger API
 npm run data:illustrations   # sinh lại src/data/illustrations.generated.json từ workout-guide
+npm run data:youtube         # tìm lại video YouTube gợi ý cho từng bài tập
+npm run data:youtube -- --missing   # chỉ tìm cho những bài chưa có
 npm run data:all
 ```
 
@@ -74,7 +76,7 @@ src/
 | [free-exercise-db](https://github.com/yuhonas/free-exercise-db) | Ảnh chụp và metadata bài tập | Unlicense (phạm vi công cộng) |
 | [Workout Guide — Bryl Lim](https://github.com/bryllim/workout-guide) | Hình vẽ 3 khung hình, dựa trên [Everkinetic](https://github.com/everkinetic/data) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — dùng nguyên bản, không chỉnh sửa |
 | [wger](https://wger.de) | Video demo bài tập | Creative Commons BY-SA (ghi tác giả theo từng video trong app) |
-| [YouTube](https://www.youtube.com) | Video do người dùng tự ghim | Phát qua trình nhúng chính thức (`youtube-nocookie.com`); app chỉ lưu mã video trên máy bạn, không tải hay lưu trữ nội dung |
+| [YouTube](https://www.youtube.com) | Video hướng dẫn gắn sẵn cho từng bài và video bạn tự đổi | Phát qua trình nhúng chính thức (`youtube-nocookie.com`); app chỉ lưu mã video, không tải hay lưu trữ nội dung |
 | [USDA FoodData Central](https://fdc.nal.usda.gov) | Giá trị dinh dưỡng trên 100 g | CC0 |
 | [Bảng thành phần thực phẩm Việt Nam 2007 — Viện Dinh dưỡng](https://www.fao.org/infoods/infoods/tables-and-databases/asia/en/) | Số liệu thực phẩm Việt | Số liệu tham chiếu, bản PDF do FAO/INFOODS lưu trữ |
 

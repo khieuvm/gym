@@ -35,7 +35,17 @@ export type Exercise = {
   cues: string[]
   mistakes: string[]
   video?: ExerciseVideo
+  youtube?: YouTubeSuggestion
   youtubeSearch: string
+}
+
+/** Video YouTube gợi ý sẵn — chỉ lưu mã video, phát bằng player chính thức. */
+export type YouTubeSuggestion = {
+  videoId: string
+  title: string
+  channel: string
+  duration: string
+  url: string
 }
 
 /** Hình vẽ 3 khung hình từ @bryllim/workout-guide (CC BY-SA 4.0). */
